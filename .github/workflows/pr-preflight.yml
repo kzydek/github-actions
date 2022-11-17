@@ -1,6 +1,13 @@
 name: PR preflight checks
 
-on: [ pull_request ]
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+     - main
+    paths:
+     - '**.md'
 
 jobs:
   lint_markdown_files:
