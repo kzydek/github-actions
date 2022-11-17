@@ -16,7 +16,7 @@ jobs:
       with:
         submodules: false
     - name: Check .md files for syntax errors
-      uses: nosborn/github-action-markdown-cli@v1.1.1
+      uses: nosborn/github-action-markdown-cli@v3.2.0
       with:
-        config_file: ".markdownlint.yaml"
+        config_file: .markdownlint.yaml
         files: "./docs"
