@@ -1,6 +1,4 @@
-This is a test file!
-
-This is a sample list:
+# This is a sample list:
 
 * yes
 * no
