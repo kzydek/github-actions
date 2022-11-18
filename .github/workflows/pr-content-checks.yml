@@ -19,3 +19,19 @@ jobs:
       with:
         config_file: ".markdownlint.yaml"
         files: "./docs"
+        
+  lint_prose:
+     # https://github.com/errata-ai/vale-action
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: false
+    - name: Lint the docs folder
+      uses: errata-ai/vale-action@master
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      with:
+        files: __onlyModified
+        onlyAnnotateModifiedLines: true
