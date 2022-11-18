@@ -2,3 +2,5 @@
 MD004:
   # List style
   style: "asterisk"
+# Trailing punctuation in heading
+MD026: false
