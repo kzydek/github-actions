@@ -3,5 +3,4 @@
 * yes
 * no
 * maybe
-* dunno
-* lalala
+- dunno
