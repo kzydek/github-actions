@@ -1,5 +1,3 @@
 # MD004/ul-style - Unordered list style
-MD004:
-  # List style
-  style: "asterisk"
-# Trailing punctuation in heading
+MD004: false
+
