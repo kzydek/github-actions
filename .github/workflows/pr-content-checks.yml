@@ -1,4 +1,4 @@
-name: PR preflight checks
+name: PR content checks
 
 on:
   pull_request:
