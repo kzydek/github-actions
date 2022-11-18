@@ -1,7 +1,8 @@
-# This is a sample list:
+# Options
+
+This is a sample list:
 
 * yes
 * no
 * maybe
-- dunno
-* nanana
+* dunno
