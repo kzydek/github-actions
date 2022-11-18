@@ -1,1 +1,7 @@
-This is a test file!
+# Options
+
+This is a sample list:
+
+* yes
+* no
+* maybe
