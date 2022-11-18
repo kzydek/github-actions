@@ -3,6 +3,6 @@
 This is a sample list:
 
 * yes
-- no
+* no
 * maybe
-- dunno
+* dunno
