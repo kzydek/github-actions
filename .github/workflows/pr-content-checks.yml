@@ -3,35 +3,25 @@ name: PR content checks
 on:
   pull_request:
     branches:
-     - main
-    paths:
-     - '**.md'
+     - 'test-link-checker'
 
-jobs:
-  lint_markdown_files:
+jobs:        
+  Link_checker:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Check out the repository
       # https://github.com/actions/checkout
-      uses: actions/checkout@v2
-    - name: Check .md files for syntax errors
-      uses: nosborn/github-action-markdown-cli@v3.2.0
+      uses: actions/checkout@v3
+    - name: Look for broken links in md & mdx files
+      # https://github.com/gaurav-nelson/github-action-markdown-link-check
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
-        config_file: ".markdownlint.yaml"
-        files: "./docs"
-        
-  lint_prose:
-     # https://github.com/errata-ai/vale-action
-    runs-on: ubuntu-latest
-    steps:
-    - name: checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: false
-    - name: Lint the docs folder
-      uses: errata-ai/vale-action@master
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      with:
-        files: __onlyModified
-        onlyAnnotateModifiedLines: true
+        # Use this configuration file with replacement and ignore patterns
+        config-file: 'mlc_config.json'
+        base-branch: 'test-link-checker'
+        # Show only errors in output
+        folder-path: 'docs/test1, docs/test2'
+        use-quiet-mode: 'yes'
+        file_extension: ".mdx"
+        # Show a detailed HTTP status for checked links
+        use-verbose-mode: 'yes'
