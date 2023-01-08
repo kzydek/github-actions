@@ -47,7 +47,7 @@ jobs:
       uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         # Use this configuration file with replacement and ignore patterns
-        config-file: '.mlc_config.json'
+        config-file: 'mlc_config.json'
         base-branch: 'test-link-checker'
         # Show only errors in output
         use-quiet-mode: 'yes'
