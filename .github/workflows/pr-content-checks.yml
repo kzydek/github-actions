@@ -22,6 +22,6 @@ jobs:
         # Show only errors in output
         folder-path: 'docs/test1, docs/test2'
         use-quiet-mode: 'yes'
-        file_extension: "md, mdx"
+        file_extension: ".md, .mdx"
         # Show a detailed HTTP status for checked links
         use-verbose-mode: 'yes'
