@@ -22,7 +22,7 @@ jobs:
         config-file: 'mlc_config.json'
         base-branch: 'test-link-checker'
         # Show only errors in output
-        folder-path: 'docs'
+        folder-path: 'docs/test1, docs/test2'
         use-quiet-mode: 'yes'
         # Show a detailed HTTP status for checked links
         use-verbose-mode: 'yes'
