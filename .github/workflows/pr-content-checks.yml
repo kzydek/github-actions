@@ -3,7 +3,7 @@ name: PR content checks
 on:
   pull_request:
     branches:
-     - test-link-checker
+     - 'test-link-checker'
     paths:
      - '**.md'
 
